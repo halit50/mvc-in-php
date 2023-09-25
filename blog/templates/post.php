@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Le blog de l'AVBN</title>
-</head>
-<body>
+<?php $title = "Les Commentaires"; ?>
+
+<?php ob_start(); ?>
+
     <h1>Le super blog de l'AVBN</h1>
     <p><a href="index.php">Retour à la liste des billets</a></p>
 
@@ -30,5 +25,7 @@
         <?php
         }
         ?>
-</body>
-</html>
+
+<?php $content = ob_get_clean(); ?>
+
+<?php require('layout.php') ?>
