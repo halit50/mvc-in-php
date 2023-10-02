@@ -16,6 +16,13 @@
 </div>
 
 <h2>Commentaires</h2>
+<form action="index.php?action=addComment&id=<?= $post['identifier'] ?>" method="post">
+    <label for="author">Auteur</label>
+    <input type="text" name="author" id="author"><br><br>
+    <label for="comment">Commentaire</label>
+    <textarea name="comment" id="comment" cols="11" rows="5"></textarea><br><br>
+    <input type="submit">
+</form>
 
 <?php
 foreach ($comments as $comment) {
@@ -25,6 +32,7 @@ foreach ($comments as $comment) {
 <?php
 }
 ?>
+
 <?php $content = ob_get_clean(); ?>
 
 <?php require('layout.php') ?>
